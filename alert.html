@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alert Test</title>
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+
+            @media (min-width: 480px) {
+                .telegramDilog-container {
+                width: 100% !important;
+                position: absolute;
+                top: 10px;
+                z-index: 100; 
+                box-sizing: border-box;
+                animation: MoveUpDown 1s linear;   
+                }
+                .telegramDilog-model {
+                    background-color: #fff;
+                    padding: 1%;
+                    margin: 0 25% 0 25%;
+                    box-shadow: 0px 5px 20px 5px #ccc;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+                }
+                .telegramDilog-nontification-box{
+                    width: 100%;
+                    display: flex;
+                }
+                .telegramDilog-notification-logo-img{
+                    width: 20%;           
+                }
+                .telegramDilog-notification-content {
+                    width: 80%;
+                    padding-left: 5%;
+                    padding-right: 5%;
+                    
+                }
+                .telegramDilog-notification-content > p {
+                    color: #373f46 !important;
+                    font-family: sans-serif;
+                    line-height: 30px;
+                }
+                .telegramDilog-noti-yes-btn > a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+                .telegramDilog-notification-btn-box {
+                    display: flex;
+                    justify-content: end;
+                }
+                .telegramDilog-noti-yes-btn, .noti-no-btn {
+                    margin: 5%;
+                }
+                .telegramDilog-noti-yes-btn{
+                    padding-left: 10%;
+                    padding-right: 10%;
+                    padding-top: 3%;
+                    padding-bottom: 3%;
+                    color: #fff;
+                    background-color: #0078d1;
+                    border: #0078d1;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+                .telegramDilog-noti-no-btn{
+                    padding-left: 10%;
+                    padding-right: 10%;
+                    padding-top: 3%;
+                    padding-bottom: 3%;
+                    color: #0078d1;
+                    background-color: #fff;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+                .telegramDilog-noti-yes-btn:hover {
+                    background-color: #fff;
+                    color: #0078d1;
+                    border: 1px solid #0078d1;
+                }
+                
+
+                @keyframes MoveUpDown {
+                    
+                    0% {
+                        top: -100px;
+                    }
+                }
+            }
+            @media (max-width: 480px) {
+                .telegramDilog-container {
+                width: 100% !important;
+                position: absolute;
+                top: 10px;
+                z-index: 100;
+                animation: MoveUpDown 1s linear; 
+                }
+                .telegramDilog-model {
+                    background-color: #fff;
+                    padding: 3%;
+                    width: 100%;
+                    box-shadow: 0px 5px 20px 5px #ccc;
+                    border-radius: 5px;
+                }
+                .telegramDilog-nontification-box{
+                    width: 100%;
+                    display: flex;
+                }
+                .telegramDilog-notification-logo-img{
+                    width: 20%;
+                    padding-top: 8%;           
+                }
+                .telegramDilog-notification-content {
+                    width: 80%;
+                    padding-left: 5%;
+                    padding-right: 5%;
+                    
+                }
+                .telegramDilog-notification-content > p {
+                    color: #373f46 !important;
+                    font-family: sans-serif;
+                    line-height: 30px;
+                }
+                .telegramDilog-noti-yes-btn > a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+                .telegramDilog-notification-btn-box {
+                    display: flex;
+                    justify-content: end;
+                }
+                .telegramDilog-noti-yes-btn, .noti-no-btn {
+                    margin: 5%;
+                }
+                .telegramDilog-noti-yes-btn{
+                    padding-left: 10%;
+                    padding-right: 10%;
+                    padding-top: 3%;
+                    padding-bottom: 3%;
+                    color: #fff;
+                    background-color: #0078d1;
+                    border: #0078d1;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+                .telegramDilog-noti-no-btn{
+                    padding-left: 10%;
+                    padding-right: 10%;
+                    padding-top: 3%;
+                    padding-bottom: 3%;
+                    color: #0078d1;
+                    background-color: #fff;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-size: 15px;
+                    font-weight: bold;
+                }
+                .telegramDilog-noti-yes-btn:hover {
+                    background-color: #fff;
+                    color: #0078d1;
+                    border: 1px solid #0078d1;
+                }
+                
+
+                @keyframes MoveUpDown {
+                    
+                    0% {
+                        top: -100px;
+                    }
+                }
+            }
+            
+        </style>
+    </head>
+    <body>
+
+
+        What is Lorem Ipsum?
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        
+        Why do we use it?
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+        
+        
+        Where does it come from?
+        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+        
+        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+        
+        Where can I get some?
+        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+        <!--div class="telegramDilog-container">
+            <div class="telegramDilog-model">
+                <div class="telegramDilog-nontification-box">
+                    <div class="telegramDilog-notification-logo-img">
+                        <img src="logo.jpeg"  width="100%"/>
+                    </div>
+                    <div class="telegramDilog-notification-content">
+                       <p> क्या आप सरकारी योजना और जॉब की जानकरी लेना चाहते हैं। तो आप हमारे टेलीग्राम ग्रुप के साथ जुड़े </p>
+                         
+                        <div class="telegramDilog-notification-btn-box">
+                            <button class="telegramDilog-noti-no-btn">जी नहीं</button> 
+                            <button class="telegramDilog-noti-yes-btn"><a href="#">जी हां </a></button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div -->
+    </body>
+</html>
+<script>
+    function telegramAlert() {
+        
+        /*
+        ======================================================
+        ======> Check if user already closed Notice <========
+        ======================================================
+        */
+        let noticeStatus = localStorage.getItem('TelegramNotice');
+        let tempNoticeStatus = sessionStorage.getItem('TelegramNotice');
+        if(noticeStatus  === "closed" || tempNoticeStatus === "closed")    /* in case user never closed dilog*/
+        {
+            console.log("Subscribe : "+noticeStatus);
+            console.log("Temp closed : "+tempNoticeStatus);
+        }
+        else {
+            /*
+            ======================================================
+            ======> Start Prepare All element of Dilog Box <======
+            ======================================================
+            */
+            
+            const body = document.getElementsByTagName("body")[0];
+            const mainCont = document.createElement('div');
+            mainCont.className = 'telegramDilog-container';
+            const modelCont = document.createElement('div');
+            modelCont.className = 'telegramDilog-model'; 
+            const notiBox = document.createElement('div');
+            notiBox.className = 'telegramDilog-nontification-box'; 
+            const logoBox = document.createElement('div');
+            logoBox.className = 'telegramDilog-notification-logo-img'; 
+            const btnBox = document.createElement('div');
+            btnBox.className = 'telegramDilog-notification-btn-box';
+            const img = document.createElement('img');
+            img.src = "https://biharonlineportal.com/wp-content/uploads/2022/01/WhatsApp-Image-2022-01-19-at-5.27.46-PM.jpeg";
+            img.setAttribute("width","100%");
+            const mainBtnBox = document.createElement('div');
+            mainBtnBox.className = 'telegramDilog-notification-content';
+            const text = document.createElement('p');
+            text.innerHTML = 'क्या आप सरकारी योजना और जॉब की जानकरी लेना चाहते हैं। तो आप हमारे टेलीग्राम ग्रुप के साथ जुड़े';
+            const btnNo = document.createElement('button');
+            btnNo.innerHTML = "जी नहीं";
+            btnNo.className = "telegramDilog-noti-no-btn";
+            const btnYes = document.createElement('button');
+            btnYes.className = "telegramDilog-noti-yes-btn";
+            const a = document.createElement('a');
+           
+            a.href = "https://t.me/biharonlineportalsite"; //=====> set here your telegram link
+
+
+            a.setAttribute("target","_blank");
+            a.innerHTML = "जी हां";
+            btnYes.append(a);
+            btnBox.append(btnNo);
+            btnBox.append(btnYes);
+            mainBtnBox.append(text);
+            mainBtnBox.append(btnBox);
+            logoBox.append(img);
+            notiBox.append(logoBox); 
+            notiBox.append(mainBtnBox);
+            modelCont.append(notiBox);
+            mainCont.append(modelCont);
+
+            body.append(mainCont);
+
+            /*
+            ======================================================
+            ======> End Prepare All element of Dilog Box <========
+            ======================================================
+            */
+
+            
+            /*
+            ======================================================
+            =======> Close Dilog if user click on No btn <========
+            ======================================================
+            */
+            btnNo.addEventListener('click' , function(){
+                mainCont.remove();
+                sessionStorage.setItem('TelegramNotice', 'closed');
+            });
+            btnYes.addEventListener('click' , function(){
+                mainCont.remove();
+                localStorage.setItem('TelegramNotice', 'closed');
+            });
+        }
+    }
+    telegramAlert();
+</script>
